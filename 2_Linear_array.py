@@ -15,11 +15,7 @@ def solution2(L, x):
         soultion2(L,5)
         >>>[0,2]
         """
-    answer =[]
-    for idx, value in enumerate(L):
-        if x == value :
-            answer.append(idx)
-            continue
-    else:
+    answer = [idx for idx, value in enumerate(L) if x == value]        
+    if x not in L:
         answer.append(-1)
     return answer
